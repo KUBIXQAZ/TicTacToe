@@ -1,0 +1,37 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicTacToe.MainPage">
+    <Grid x:Name="grid" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+            <Label x:Name="userWins" Text="Wins 0" TextColor="#00ff00" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand"></Label>
+            <Label x:Name="botWins" Text="0 Losses" TextColor="#ff0000" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand"></Label>
+        </StackLayout>
+
+        <Button x:Name="btn1" Grid.Row="1" Grid.Column="0" Clicked="playerPick" Margin="2" BackgroundColor="#383838"></Button>
+        <Button x:Name="btn2" Grid.Row="1" Grid.Column="1" Clicked="playerPick" Margin="2" BackgroundColor="#383838"></Button>
+        <Button x:Name="btn3" Grid.Row="1" Grid.Column="2" Clicked="playerPick" Margin="2" BackgroundColor="#383838"></Button>
+
+        <Button x:Name="btn4" Grid.Row="2" Grid.Column="0" Clicked="playerPick" Margin="2" BackgroundColor="#383838"></Button>
+        <Button x:Name="btn5" Grid.Row="2" Grid.Column="1" Clicked="playerPick" Margin="2" BackgroundColor="#383838"></Button>
+        <Button x:Name="btn6" Grid.Row="2" Grid.Column="2" Clicked="playerPick" Margin="2" BackgroundColor="#383838"></Button>
+
+        <Button x:Name="btn7" Grid.Row="3" Grid.Column="0" Clicked="playerPick" Margin="2" BackgroundColor="#383838"></Button>
+        <Button x:Name="btn8" Grid.Row="3" Grid.Column="1" Clicked="playerPick" Margin="2" BackgroundColor="#383838"></Button>
+        <Button x:Name="btn9" Grid.Row="3" Grid.Column="2" Clicked="playerPick" Margin="2" BackgroundColor="#383838"></Button>
+
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" x:Name="NewGameB" Margin="2" BackgroundColor="#383838" TextColor="White" Text="NEW GAME" Clicked="NewGameButton"></Button>
+    </Grid>
+</ContentPage>

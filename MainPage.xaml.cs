@@ -1,4 +1,5 @@
-﻿using System.Xml.Serialization;
+﻿using System.Reflection.Metadata.Ecma335;
+using System.Xml.Serialization;
 
 namespace TicTacToe;
 
@@ -123,12 +124,14 @@ public partial class MainPage : ContentPage
             btn1.Text == botSymbol && btn5.Text == botSymbol && btn9.Text == botSymbol ||
             btn3.Text == botSymbol && btn5.Text == botSymbol && btn7.Text == botSymbol) return 2;
 
+        else if (buttons.Count == 0) return 3;
+
         else return 0;
     }
     
     private bool CheckStatus(int state)
     {
-        if (state == 1 || state == 2)
+        if (state == 1 || state == 2 || state == 3)
         {
             foreach (var btn in buttons)
             {
@@ -138,11 +141,13 @@ public partial class MainPage : ContentPage
             {
                 BackgroundColor = Color.FromRgb(0, 43, 0);
                 stats.Wins++;
-            }
-            else if (state == 2)
+            } else if (state == 2)
             {
                 BackgroundColor = Color.FromRgb(48, 0, 0);
                 stats.Losses++;
+            } else if (state == 3)
+            {
+                BackgroundColor = Color.FromRgb(0, 0, 87);
             }
             SaveStats();
             LoadStats();

@@ -142,7 +142,7 @@ public partial class MainPage : ContentPage
             else if (state == 2)
             {
                 BackgroundColor = Color.FromRgb(48, 0, 0);
-                stats.Losses--;
+                stats.Losses++;
             }
             SaveStats();
             LoadStats();

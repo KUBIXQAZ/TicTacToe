@@ -20,17 +20,17 @@
             <Label x:Name="botWins" Text="0 Losses" TextColor="#ff0000" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand"></Label>
         </StackLayout>
 
-        <Button x:Name="btn1" Grid.Row="1" Grid.Column="0" Clicked="playerPick" Margin="2" BackgroundColor="#383838"></Button>
-        <Button x:Name="btn2" Grid.Row="1" Grid.Column="1" Clicked="playerPick" Margin="2" BackgroundColor="#383838"></Button>
-        <Button x:Name="btn3" Grid.Row="1" Grid.Column="2" Clicked="playerPick" Margin="2" BackgroundColor="#383838"></Button>
+        <Button x:Name="btn1" Grid.Row="1" Grid.Column="0" Clicked="playerPick" Margin="2" BackgroundColor="#383838" Text="a"></Button>
+        <Button x:Name="btn2" Grid.Row="1" Grid.Column="1" Clicked="playerPick" Margin="2" BackgroundColor="#383838" Text="b"></Button>
+        <Button x:Name="btn3" Grid.Row="1" Grid.Column="2" Clicked="playerPick" Margin="2" BackgroundColor="#383838" Text="c"></Button>
 
-        <Button x:Name="btn4" Grid.Row="2" Grid.Column="0" Clicked="playerPick" Margin="2" BackgroundColor="#383838"></Button>
-        <Button x:Name="btn5" Grid.Row="2" Grid.Column="1" Clicked="playerPick" Margin="2" BackgroundColor="#383838"></Button>
-        <Button x:Name="btn6" Grid.Row="2" Grid.Column="2" Clicked="playerPick" Margin="2" BackgroundColor="#383838"></Button>
+        <Button x:Name="btn4" Grid.Row="2" Grid.Column="0" Clicked="playerPick" Margin="2" BackgroundColor="#383838" Text="d"></Button>
+        <Button x:Name="btn5" Grid.Row="2" Grid.Column="1" Clicked="playerPick" Margin="2" BackgroundColor="#383838" Text="e"></Button>
+        <Button x:Name="btn6" Grid.Row="2" Grid.Column="2" Clicked="playerPick" Margin="2" BackgroundColor="#383838" Text="f"></Button>
 
-        <Button x:Name="btn7" Grid.Row="3" Grid.Column="0" Clicked="playerPick" Margin="2" BackgroundColor="#383838"></Button>
-        <Button x:Name="btn8" Grid.Row="3" Grid.Column="1" Clicked="playerPick" Margin="2" BackgroundColor="#383838"></Button>
-        <Button x:Name="btn9" Grid.Row="3" Grid.Column="2" Clicked="playerPick" Margin="2" BackgroundColor="#383838"></Button>
+        <Button x:Name="btn7" Grid.Row="3" Grid.Column="0" Clicked="playerPick" Margin="2" BackgroundColor="#383838" Text="g"></Button>
+        <Button x:Name="btn8" Grid.Row="3" Grid.Column="1" Clicked="playerPick" Margin="2" BackgroundColor="#383838" Text="h"></Button>
+        <Button x:Name="btn9" Grid.Row="3" Grid.Column="2" Clicked="playerPick" Margin="2" BackgroundColor="#383838" Text="i"></Button>
 
         <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" x:Name="NewGameB" Margin="2" BackgroundColor="#383838" TextColor="White" Text="NEW GAME" Clicked="NewGameButton"></Button>
     </Grid>

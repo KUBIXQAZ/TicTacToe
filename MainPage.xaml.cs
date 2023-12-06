@@ -100,9 +100,42 @@ public partial class MainPage : ContentPage
         Random random = new Random();
         Button btn;
 
+        //attact if can win, win//
+        //horizontal//
+        if (btn1.Text == "" && btn2.Text == botSymbol && btn3.Text == botSymbol) btn = buttons[0];
+        else if (btn1.Text == botSymbol && btn2.Text == "" && btn3.Text == botSymbol) btn = buttons[1];
+        else if (btn1.Text == botSymbol && btn2.Text == botSymbol && btn3.Text == "") btn = buttons[2];
+
+        else if (btn4.Text == "" && btn5.Text == botSymbol && btn6.Text == botSymbol) btn = buttons[3];
+        else if (btn4.Text == botSymbol && btn5.Text == "" && btn6.Text == botSymbol) btn = buttons[4];
+        else if (btn4.Text == botSymbol && btn5.Text == botSymbol && btn6.Text == "") btn = buttons[5];
+
+        else if (btn7.Text == "" && btn8.Text == botSymbol && btn9.Text == botSymbol) btn = buttons[6];
+        else if (btn7.Text == botSymbol && btn8.Text == "" && btn9.Text == botSymbol) btn = buttons[7];
+        else if (btn7.Text == botSymbol && btn8.Text == botSymbol && btn9.Text == "") btn = buttons[8];
+        //vertical//
+        else if (btn1.Text == "" && btn4.Text == botSymbol && btn7.Text == botSymbol) btn = buttons[0];
+        else if (btn1.Text == botSymbol && btn4.Text == "" && btn7.Text == botSymbol) btn = buttons[3];
+        else if (btn1.Text == botSymbol && btn4.Text == botSymbol && btn7.Text == "") btn = buttons[6];
+
+        else if (btn2.Text == "" && btn5.Text == botSymbol && btn8.Text == botSymbol) btn = buttons[1];
+        else if (btn2.Text == botSymbol && btn5.Text == "" && btn8.Text == botSymbol) btn = buttons[4];
+        else if (btn2.Text == botSymbol && btn5.Text == botSymbol && btn8.Text == "") btn = buttons[7];
+
+        else if (btn3.Text == "" && btn6.Text == botSymbol && btn9.Text == botSymbol) btn = buttons[2];
+        else if (btn3.Text == botSymbol && btn6.Text == "" && btn9.Text == botSymbol) btn = buttons[5];
+        else if (btn3.Text == botSymbol && btn6.Text == botSymbol && btn9.Text == "") btn = buttons[8];
+        //diagonally from left-top to right-bottom//
+        else if (btn1.Text == "" && btn5.Text == botSymbol && btn9.Text == botSymbol) btn = buttons[0];
+        else if (btn1.Text == botSymbol && btn5.Text == "" && btn9.Text == botSymbol) btn = buttons[4];
+        else if (btn1.Text == botSymbol && btn5.Text == botSymbol && btn9.Text == "") btn = buttons[8];
+        //diagonally from left-bottom to right-top//
+        else if (btn7.Text == "" && btn5.Text == botSymbol && btn3.Text == botSymbol) btn = buttons[6];
+        else if (btn7.Text == botSymbol && btn5.Text == "" && btn3.Text == botSymbol) btn = buttons[4];
+        else if (btn7.Text == botSymbol && btn5.Text == botSymbol && btn3.Text == "") btn = buttons[2];
         //defense//
         //horizontal//
-        if (btn1.Text == userSymbol && btn2.Text == userSymbol && btn3.Text == "") btn = buttons[2];
+        else if (btn1.Text == userSymbol && btn2.Text == userSymbol && btn3.Text == "") btn = buttons[2];
         else if (btn1.Text == userSymbol && btn2.Text == "" && btn3.Text == userSymbol) btn = buttons[1];
         else if (btn1.Text == "" && btn2.Text == userSymbol && btn3.Text == userSymbol) btn = buttons[0];
 
@@ -166,40 +199,6 @@ public partial class MainPage : ContentPage
         else if (btn7.Text == botSymbol && btn5.Text == "" && btn3.Text == "") btn = buttons[random.Next(2) * 2 + 2];
         else if (btn7.Text == "" && btn5.Text == botSymbol && btn3.Text == "") btn = buttons[random.Next(2) * 4 + 2];
         else if (btn7.Text == "" && btn5.Text == "" && btn3.Text == botSymbol) btn = buttons[random.Next(2) * 2 + 4];
-        //attact step 3//
-        //horizontal//
-        else if (btn1.Text == "" && btn2.Text == botSymbol && btn3.Text == botSymbol) btn = buttons[0];
-        else if (btn1.Text == botSymbol && btn2.Text == "" && btn3.Text == botSymbol) btn = buttons[1];
-        else if (btn1.Text == botSymbol && btn2.Text == botSymbol && btn3.Text == "") btn = buttons[2];
-
-        else if (btn4.Text == "" && btn5.Text == botSymbol && btn6.Text == botSymbol) btn = buttons[3];
-        else if (btn4.Text == botSymbol && btn5.Text == "" && btn6.Text == botSymbol) btn = buttons[4];
-        else if (btn4.Text == botSymbol && btn5.Text == botSymbol && btn6.Text == "") btn = buttons[5];
-
-        else if (btn7.Text == "" && btn8.Text == botSymbol && btn9.Text == botSymbol) btn = buttons[6];
-        else if (btn7.Text == botSymbol && btn8.Text == "" && btn9.Text == botSymbol) btn = buttons[7];
-        else if (btn7.Text == botSymbol && btn8.Text == botSymbol && btn9.Text == "") btn = buttons[8];
-        //vertical//
-        else if (btn1.Text == "" && btn4.Text == botSymbol && btn7.Text == botSymbol) btn = buttons[0];
-        else if (btn1.Text == botSymbol && btn4.Text == "" && btn7.Text == botSymbol) btn = buttons[3];
-        else if (btn1.Text == botSymbol && btn4.Text == botSymbol && btn7.Text == "") btn = buttons[6];
-
-        else if (btn2.Text == "" && btn5.Text == botSymbol && btn8.Text == botSymbol) btn = buttons[1];
-        else if (btn2.Text == botSymbol && btn5.Text == "" && btn8.Text == botSymbol) btn = buttons[4];
-        else if (btn2.Text == botSymbol && btn5.Text == botSymbol && btn8.Text == "") btn = buttons[7];
-
-        else if (btn3.Text == "" && btn6.Text == botSymbol && btn9.Text == botSymbol) btn = buttons[2];
-        else if (btn3.Text == botSymbol && btn6.Text == "" && btn9.Text == botSymbol) btn = buttons[5];
-        else if (btn3.Text == botSymbol && btn6.Text == botSymbol && btn9.Text == "") btn = buttons[8];
-        //diagonally from left-top to right-bottom//
-        else if (btn1.Text == "" && btn5.Text == botSymbol && btn9.Text == botSymbol) btn = buttons[0];
-        else if (btn1.Text == botSymbol && btn5.Text == "" && btn9.Text == botSymbol) btn = buttons[4];
-        else if (btn1.Text == botSymbol && btn5.Text == botSymbol && btn9.Text == "") btn = buttons[8];
-        //diagonally from left-bottom to right-top//
-        else if (btn7.Text == "" && btn5.Text == botSymbol && btn3.Text == botSymbol) btn = buttons[6];
-        else if (btn7.Text == botSymbol && btn5.Text == "" && btn3.Text == botSymbol) btn = buttons[4];
-        else if (btn7.Text == botSymbol && btn5.Text == botSymbol && btn3.Text == "") btn = buttons[2];
-
         //random pick//
         else btn = activeButtons[random.Next(activeButtons.Count)];
 
